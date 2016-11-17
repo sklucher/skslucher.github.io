@@ -12,7 +12,7 @@ function UnityProgress (dom) {
 		this.Update();
 	}
 	this.SetMessage = function (message) {
-		if(message == "Downloading (0.0/1)") message = "Downloading...????";
+		if(message == "Downloading (0.0/1)") message = "Downloading...??";
 		this.message = message;
 		this.Update();
 	}
