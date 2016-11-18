@@ -17,9 +17,13 @@ function UnityProgress (dom) {
 		this.Update();
 	}
 	this.SetMessage = function (message) {
+<<<<<<< HEAD:Test/11-16/TemplateData/Progress.js
 		if(message == "Downloading (0.0/1)")
 			message = "Downloading...";
 		
+=======
+		if(message == "Downloading (0.0/1)") message = "Downloading...??";
+>>>>>>> origin/master:Test/TemplateData/Progress.js
 		this.message = message;
 		this.Update();
 	}
