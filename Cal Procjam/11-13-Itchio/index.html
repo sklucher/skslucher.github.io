@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Cal</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/Progress.js"></script>
+  </head>
+  <body class="index">
+	<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+	<div class="progress" id="progressBox" style="position:absolute">
+		<div id="progressBackground" style="background:#4D4D4D"></div>
+		<img id="progressLogo" src="TemplateData/progresslogo.png"></img>
+		<p id="progressMessage">Loading</p>
+	</div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/11-13-Itchio.data",
+    codeUrl: "Release/11-13-Itchio.js",
+    memUrl: "Release/11-13-Itchio.mem",
+    
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
