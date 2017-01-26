@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | ZAK</title>
+    <link rel="stylesheet" href="TemplateData/index.css">
+    <script src="TemplateData/Progress.js"></script>
+	<style>
+	
+	#progressBox{ background-color: #525458; }
+
+	p, h1,h2,h3{ color: #ffffff; }
+	#progressBarBox{ background-color: #ffffff; }
+
+	a{ color: #eedcdc; }
+	#progressBar{ background-color: #eedcdc; }
+	
+	</style>
+  </head>
+  <body data-width="960px" data-height="540px" data-name="ZAK">
+	<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+	<div id="progressBox">
+		<div id="progressContents">
+			<h3>a game by</h3>
+			<h2><a href="http://twitter.com/skslucher" target="_blank">@skslucher</a></h2>
+			<div id="progressBarBox">
+				<div id="progressBar"></div>
+			</div>
+			<p id="progressMessage">Loading</p>
+		</div>
+	</div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 50331648,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/1-26.data",
+    codeUrl: "Release/1-26.js",
+    memUrl: "Release/1-26.mem",
+    
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
+
