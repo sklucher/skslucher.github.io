@@ -27,7 +27,7 @@
             TOTAL_MEMORY: 50331648,
             errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
             compatibilitycheck: function () {		
-				if (hasWebGL) {
+				/*if (hasWebGL) {
 					if (mobile) {
 						if(!confirm("Please note that Unity WebGL is not currently supported on mobiles. Press Ok if you wish to continue anyway.")) 
 							window.history.back();
@@ -41,6 +41,11 @@
 				} else {
 					alert("You need a browser which supports WebGL to run this content. Try installing Firefox.");
 					window.history.back();
+				}*/
+				CompatabilityCheck();
+				if(hasWebGL && !mobile && -1 != browser.indexOf("Chrome")){
+					if(!confirm("Please note that your browser does not currently support saving, so your progress will be reset between sessions. Try installing Firefox, or press Ok if you wish to continue anyway."))
+								window.history.back();
 				}
 			},
             dataUrl: "Release/4-2 Kong.data",
