@@ -26,14 +26,14 @@
         var Module = {
             TOTAL_MEMORY: 50331648,
             errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-            compatibilitycheck: function () {
-				alert(browser);
+            compatibilitycheck: function () {		
 				if (hasWebGL) {
 					if (mobile) {
 						if(!confirm("Please note that Unity WebGL is not currently supported on mobiles. Press Ok if you wish to continue anyway.")) 
 							window.history.back();
 					} else {
-						if (-1 == browser.indexOf("Firefox") && -1 == browser.indexOf("Chrome") && -1 == browser.indexOf("Safari")) {
+						//if (-1 == browser.indexOf("Firefox") && -1 == browser.indexOf("Chrome") && -1 == browser.indexOf("Safari")) {
+						if ((-1 == browser.indexOf("Firefox") && -1 == browser.indexOf("Chrome")) || -1 != navigator.userAgent.indexOf("Edge")) {
 							if(!confirm("Please note that your browser is not currently supported for this Unity WebGL content. Try installing Firefox, or press Ok if you wish to continue anyway."))
 								window.history.back();
 						}
