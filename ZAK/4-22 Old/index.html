@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Zak</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/Progress.js"></script>
+    <script src='https://cdn1.kongregate.com/javascripts/kongregate_api.js'></script>
+</head>
+<body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <div id="progressBox">
+        <div id="progressContents">
+            <h3>a game by</h3>
+            <h2><a href="http://twitter.com/skslucher" target="_blank">Scott Slucher</a></h2>
+            <div id="progressBarBox">
+                <div id="progressBar"></div>
+            </div>
+            <p id="progressMessage">Loading</p>
+            <p>if you want to support games like this,</p>
+            <h3><a href="https://skslucher.itch.io/zak">check out ZAK DX on itch.io</a></h3>
+        </div>
+    </div>
+    <script type='text/javascript'>
+        var Module = {
+            TOTAL_MEMORY: 50331648,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: function () {
+				CompatibilityCheck();
+				if(hasWebGL && !mobile){
+					if(-1 != browser.indexOf("Safari")){
+						if(!confirm("Please note that your browser does not currently support saving, so your progress will be reset between sessions. Try installing Firefox, or press Ok if you wish to continue anyway."))
+							window.history.back();
+					}
+					if(-1 != navigator.userAgent.indexOf("Edge")){
+						if(!confirm("Please note that Edge is known to have keyboard control bugs. If you experience these issues, try installing Firefox."))
+							window.history.back();
+					}
+				}
+			},
+            dataUrl: "Release/4-2 Kong.data",
+            codeUrl: "Release/4-2 Kong.js",
+            memUrl: "Release/4-2 Kong.mem",
+
+        };
+</script>
+    <script src="Release/UnityLoader.js"></script>
+
+</body>
+</html>
+
