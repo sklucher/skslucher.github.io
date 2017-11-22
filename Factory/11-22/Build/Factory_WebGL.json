@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 67108864,
+"dataUrl": "Factory_WebGL.data.unityweb",
+"asmCodeUrl": "Factory_WebGL.asm.code.unityweb",
+"asmMemoryUrl": "Factory_WebGL.asm.memory.unityweb",
+"asmFrameworkUrl": "Factory_WebGL.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
